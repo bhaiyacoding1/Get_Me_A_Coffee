@@ -126,9 +126,9 @@ const PaymentPage = ({ username }) => {
                             {payments.length === 0 && <li>No Payments yet</li>}
                             {payments.map((p, i) => {
                                 return <li key={i} className='my-5 flex gap-2 items-center'>
-                                    <img className='border border-white rounded-full p-1 bg-slate-200' src="/images/avtar.gif" width={27} alt="avtar" />
+                                    <Image className='border border-white rounded-full p-1 bg-slate-200' src="/images/avtar.gif" width={27} height={27} alt="avtar" />
                                     <span className='text-sm'>
-                                        {p.name} donated <span className='font-bold'>₹{p.amount}</span> with a message"{p.message}"
+                                        {p.name} donated <span className='font-bold'>₹{p.amount}</span>with a message"{p.message}"
                                     </span>
                                 </li>
                             })}
