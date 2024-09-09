@@ -4,13 +4,13 @@ const connectDB = async () => {
     try {
       // const conn = await mongoose.connect(`mongodb://localhost:27017/coffee`, {
       const conn = await mongoose.connect(`mongodb+srv://bhaiyacoding1:J4TuFzq8zH1vn0Lz@cluster0.y8cc7.mongodb.net/coffee`, {
-        useUnifiedTopology: true,  // Optional, but recommended for better connection handling
+        useNewUrlParser: true,
       });
-      console.log(`MongoDB Connected: ${conn.connection.host}`);
+      // console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
-      console.error(`Error: ${error.message}`);
+      console.error(error.message);
       process.exit(1);
     }
-};
+  }
 
-export default connectDB;
+  export default connectDB;
